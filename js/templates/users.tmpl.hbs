@@ -1,0 +1,51 @@
+{{ debug }}
+<tr class="shortDesc">
+    <td>
+        <div class="user-avatar-small">
+            <img src="{{ imgMedium }}" alt="{{ first }}">
+        </div>
+    </td>
+    <td>{{ first }}</td>
+    <td>{{ last }}</td>
+    <td>{{ username }}</td>
+    <td>{{ phone }}</td>
+    <td>{{ location }}</td>
+    <td><a id="{{ username }}" href="#"><i class="fa fa-plus-circle fa-2x"></i></a></td>
+</tr>
+<tr>
+    <td colspan="7" id="{{ username }}" class="fullDesc {{ username }}">
+        <div class="wrapper">
+            <p class="first-name"><span class="bold">{{ first }} </span>
+
+                {{#if_gender gender 'male'}}
+                    <i class="fa fa-mars fa-2x" aria-hidden="true"></i>
+                {{else}}
+                    <i class="fa fa-venus fa-2x" aria-hidden="true"></i>
+                {{/if_gender}}
+
+            </p>
+            <div class="row accordion-body collapse">
+                <div class="three columns info">
+                    <p><span class="bold">Username: </span>{{ username }}</p>
+                    <p><span class="bold">Registered: </span> {{ registered }}</p>
+                    <p><span class="bold">Email: </span>{{ email }}</p>
+                </div>
+                <div class="three columns info">
+                    <p><span class="bold">Address: </span>{{ address }}</p>
+                    <p><span class="bold">City: </span>{{ location }}</p>
+                    <p><span class="bold">Post: </span>{{ postcode }}</p>
+                </div>
+                <div class="three columns info">
+                    <p><span class="bold">Birthday: </span>{{ dob }}</p>
+                    <p><span class="bold">Phone: </span>{{ phone }}</p>
+                    <p><span class="bold">Cell: </span>{{ cell }}</p>
+                </div>
+                <div class="three columns info">
+                    <div class="user-avatar-large">
+                        <img src="{{ imgLarge }}" alt="{{ first }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
